@@ -22,7 +22,7 @@ resource "yandex_compute_instance_group" "group-vms-b" {
     }
 
     metadata = {
-      user-data = "${file("~/terraform/cloud_config_group_vms_b.yaml")}"
+      user-data = "${file("cloud_config_group_vms_b.yaml")}"
     }
     network_settings {
       type = "STANDARD"
