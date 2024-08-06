@@ -20,13 +20,13 @@ resource "yandex_iam_service_account" "alb-logging-sa" {
 }
 
 resource "yandex_resourcemanager_folder_iam_member" "alb-logging-sa-editor" {
-  folder_id   = var.folder_id
-  role        = "editor"
-  member      = "serviceAccount:${yandex_iam_service_account.alb-logging-sa.id}"
+  folder_id = var.folder_id
+  role      = "editor"
+  member    = "serviceAccount:${yandex_iam_service_account.alb-logging-sa.id}"
 }
 
 resource "yandex_resourcemanager_folder_iam_member" "alb-logging-sa-invoker" {
-  folder_id   = var.folder_id
-  role        = "functions.functionInvoker"
-  member      = "serviceAccount:${yandex_iam_service_account.alb-logging-sa.id}"
+  folder_id = var.folder_id
+  role      = "functions.functionInvoker"
+  member    = "serviceAccount:${yandex_iam_service_account.alb-logging-sa.id}"
 }
