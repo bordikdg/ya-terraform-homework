@@ -1,0 +1,14 @@
+#cloud-config
+ssh_pwauth: no
+users:
+- name: bdg
+  sudo: ALL=(ALL) NOPASSWD:ALL
+  shell: /bin/bash
+  ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCq2e7lp5BBkRPsA6c7dUUrvAtyHreYm/EjVPeKR7eX0RKAWnUQ1EUUaV0dAsFDxDF2n3aJeDgzii2+Ryga5uO+esR5Zvh0ZnF7wxeclFRfLS0YXPXzBCTWXyXIu+4OWKwNZmV96ea81A124GCAzCOkMMuSM+a+gNs/jYH4JWezs1/GKaRrbj0WuaPNXPoLYC28W2T4wUJMdk+WRd3bfmknGtrUgamvQMpVzD1+c0SqJuU4ivX/Rgs2f4AU72hH9RgfwWZLw5hfRQ0eS8STBrhoASmBTa75Tg20xjy6nEkVh4Mo2UTF4VQJryir/eJyHlVyQzsWznQq3p93uqnUNHZJ bdg
+
+runcmd:
+ - echo "<h2>This is  availability zone ru-central1-B<h2>" > /var/www/html/index2.html
+# - apt-get update && apt-get install -y nginx
+# - systemctl enable nginx
+# - systemctl restart nginx
