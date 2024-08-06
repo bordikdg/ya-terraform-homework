@@ -3,6 +3,7 @@
   - установить и настроить terraform / https://yandex.cloud/ru/docs/tutorials/infrastructure-management/terraform-quickstart#cli_1
   - установить и настроить командную строку Yandex Cloud (CLI) / https://yandex.cloud/ru/docs/cli/quickstart
   - установить psql / Examle install for Linux Ubuntu - sudo apt-get install -y postgresql-client
+  - приобрести домен, например в https://www.reg.ru/, и отредактировать список DNS северов в зоне 
 
 После подготовки окружения необходимо скачать данный репозиторий и выполнить:
   - terraform init
